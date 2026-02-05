@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Thi Thử Tiếng Anh</title>
+<style>
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:#e6f4ff;
+}
+
+.container{
+  display:flex;
+  height:100vh;
+  overflow:hidden;
+}
+.reading{
+  flex:1;
+  padding:20px;
+  background:#f5fbff;
+  overflow-y:auto;
+  height:100vh;
+}
+
+
+/* SIDEBAR */
+.sidebar{
+  width:200px;
+  background:#cce7ff;
+  padding:15px;
+  box-sizing:border-box;
+}
+.question-list{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:8px;
+}
+.question-list button{
+  padding:8px;
+  border:none;
+  border-radius:6px;
+  cursor:pointer;
+}
+.active{
+  background:#3399ff;
+  color:white;
+}
+
+/* READING */
+.reading{
+  flex:1;
+  padding:20px;
+  overflow-y:auto;
+  background:#f5fbff;
+}
+
+/* QUESTION */
+.question-box{
+  width:350px;
+  background:#d9efff;
+  padding:20px;
+  box-sizing:border-box;
+}
+
+.option{
+  background:white;
+  padding:10px;
+  margin:8px 0;
+  border-radius:8px;
+  cursor:pointer;
+  border:1px solid #cce7ff;
+}
+.option:hover{
+  background:#cce7ff;
+}
+.selected{
+  background:#99ccff;
+}
+
+.submit-btn{
+  margin-top:15px;
+  width:100%;
+  padding:10px;
+  background:#3399ff;
+  color:white;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+<h3>Câu</h3>
+<div class="question-list" id="questionList"></div>
+<button class="submit-btn" onclick="submitQuiz()">Nộp</button>
+</div>
+
+<!-- READING -->
+<div class="reading">
+
+<p><b>
+Read the following passage about Nellie Bly and mark the letter A, B, C, or D on your answer sheet 
+to indicate the option that best fits each of the numbered blanks from 1 to 5.
+</b></p>
+
+
+<p>
+Nellie Bly was an American journalist, (1) ______. She also made the fastest trip around the world.
+She was born in 1864 in Pennsylvania, the United States. Her parents named her Elizabeth Jane Cochran. 
+She started her career in 1885 after writing an angry response to an article called <i>What Girls Are Good For</i> 
+in the <i>Pittsburgh Dispatch</i>. They were impressed and gave her a job. (2) ______, 
+and that they should have better opportunities. She then used the name Nellie Bly for the rest of her career.
+</p>
+
+<p>
+After leaving the <i>Pittsburgh Dispatch</i>, (3) ______. She finally got a job at the 
+<i>New York World</i> by agreeing to pretend to be mentally unwell to investigate a mental asylum. 
+Her report exposed the asylum’s conditions, and it was forced to improve its patient care. 
+During her career, she wrote about many difficult issues, and most of them are in support of women’s lives.
+</p>
+
+<p>
+In 1889, inspired by Jules Verne’s novel <i>Around the World in Eighty Days</i>, she took a trip around the world. 
+The idea (4) ______ because “no one but a man can do this”, but finally her editor agreed. 
+She traveled alone for most of it, an unusual thing for women to do at the time. 
+She actually met Jules Verne in France and completed the trip after 72 days, setting a world record.
+</p>
+
+<p>
+In her later years, Nellie Bly returned to journalism. She wrote reports about World War I and problems that impacted women. 
+Nellie Bly died in 1922 at the age of 57. (5) ______.
+</p>
+
+<hr>
+
+<p><b>
+Read the following advertisement and mark the letter A, B, C or D on your answer sheet 
+to indicate the option that best fits each of the numbered blanks from 6 to 11.
+</b></p>
+
+<h2>Zero-Waste Wardrobes: Fashion That Regenerates The Earth</h2>
+
+<p>
+Our beautiful (6) ______ natural fabrics always come from sustainable natural sources. 
+The (7) ______ truly helps our beautiful green planet every day.
+We proudly sell quality products (8) ______ are made from organic materials in our stores. 
+We happily bring eco-friendly clothes (9) ______ you at affordable prices every season.
+You should (10) ______ up with the times by choosing sustainable fashion options 
+for your everyday wardrobe needs. 
+We strongly want (11) ______ colorful zero-waste clothing for everyone in our community.
+</p>
+
+<hr>
+
+<p><b>
+Read the following passage and mark the letter A, B, C or D on your answer sheet 
+to indicate the best answer to each of the following questions.
+</b></p>
+
+<h2></h2>
+
+<p>
+Cultural bias remains a significant obstacle in our connected world. As we enter 2025, many communities struggle with preconceptions about people from different <br>
+In workplaces, cultural bias manifests when managers favor candidates who share their cultural background. In schools, students from certain cultures may face lower expectations from teachers who harbor preconceptions. Media representation perpetuates stereotypes by portraying specific groups in limited roles. These portrayals reinforce existing biases and shape public perception. Organizations that neglect cultural diversity training risk creating unwelcoming environments for employees and clients alike.<br>
+Approaches to mitigate cultural bias include educational initiatives exposing people to diverse perspectives early. Technology facilitates cultural exchange through virtual reality experiences. Many corporations have implemented blind recruitment processes to eliminate discrimination. Community events celebrating different traditions help break down barriers between groups. These combined efforts are gradually shifting attitudes, though progress remains uneven across regions.<br>
+The benefits of overcoming cultural bias extend beyond social harmony. Research indicates that diverse teams outperform homogeneous ones in problem-solving. Countries embracing multiculturalism often experience economic growth through increased creativity. Individuals who overcome their biases report more fulfilling relationships and broader worldviews. The challenge of confronting cultural bias requires sustained commitment from individuals, organizations, and governments working together.
+</p>
+
+<hr>
+
+<p><b>
+Read the following passage about Christmas trees and mark the letter A, B, C, or D 
+to indicate the correct answer to each of the questions.
+</b></p>
+
+<h2>CHRISTMAS TREES AND THE ENVIRONMENT</h2>
+
+<p>
+[I] The environmental impact of Christmas trees goes beyond choosing real or artificial. [II] Real trees, typically spruce, fir, or pine, are grown on plantations for about ten years, supporting biodiversity by providing habitats for farmland birds and insects. [III] These trees play a small but meaningful role in preserving rural landscapes and preventing alternative, less sustainable land uses, like urban development. [IV].
+</p>
+
+<p>
+Artificial trees, while reusable, have a significantly higher carbon footprint during production and transport...
+</p>
+
+<p>
+Artificial trees, while reusable, have a significantly higher carbon footprint during production and transport. According to the Carbon Trust, they must be reused for several years to match the lower carbon footprint of real trees.
+</p>
+
+<p>
+Disposal methods are critical. Real trees release their stored carbon upon decay, but if they end up in landfill, anaerobic conditions produce methane, a far more potent greenhouse gas. Composting, chipping, or using trees for energy or habitat restoration are far better alternatives. Additionally, some companies now offer tree rentals, and pot-grown trees can be replanted, making them excellent sustainable options.
+</p>
+<p>Sustainability efforts can also include buying locally grown trees, reducing travel emissions, and supporting certified sustainable farms. While Christmas trees represent a minor part of land use and the global carbon cycle, their management highlights opportunities for improvement. Reducing waste, eliminating fertilisers, and avoiding landfill disposal are practical steps toward making this cherished tradition more eco-friendly.</p>
+<p>Though a small element of the festive season, Christmas trees remind us of the broader need to balance ecological responsibility with tradition. With mindful practices, this holiday symbol can contribute positively to both biodiversity and climate goals.</p>
+
+<hr>
+
+<p><b>
+Read the following leaflet and mark the letter A, B, C, and D 
+to indicate the option that best fits each of the numbered blanks from 30 to 35.
+</b></p>
+
+<h2>ECO – FRIENDLY HOME SOLUTIONS: BUILD A GREENER FUTURE TODAY!</h2>
+
+<p>
+Let’s take action and make our homes more eco – friendly to contribute to a better future for the planet. 
+</p>
+<p> <b> Here are some important facts and figures: </b><p>
+<p>- Did you know that synthetic chemicals used in farming have harmed countless insects and animals? (30) ___________, we throw away 80 million cans every day and 45,000 tonnes of plastic packaging each year. This waste kills nearly one million seabirds annually.</p>
+<p><b>Positive Actions You Can Take:</b><p>
+<p>- Buy and (31) ___________ fresh, organic food produced locally. This reduces the need for long – distance food transport, which in turn cuts down on pollution and greenhouse gas emissions.</p>
+<p>- Don’t always buy food that comes in cans or plastic packaging. The other option is to make your own meals, which helps reduce (32) ___________ amount of rubbish you produce and saves you money.</b>
+<p>- (33) ___________ packaging wherever possible. Separate paper, plastic, and metal items for recycling. By doing so, we help reduce the waste that ends up in landfills.</p>
+<p><b>Other Ways to Make a Difference at Home:</b></p>
+<p>- Use energy – efficient appliances. These (34) ___________ help reduce your electricity consumption and (35) ___________ the amount of energy used by the grid.</p>
+<p>- Install water – saving devices. These help you use less water while taking showers, washing dishes, or even watering the plants, which conserves an essential natural resource.</p>
+<p>Let’s all work together to make our homes eco – friendly and reduce our environmental impact. By changing small habits, we can make a big difference for the future of the planet.</p>
+<p><b>
+Read the following leaflet and mark the letter A, B, C, and D 
+to indicate the option that best fits each of the numbered blanks from 30 to 35.
+</b></p>
+
+
+<h3>Question 36.</h3>
+<p>a. Susan: I've heard about it, but I'm not sure yet.<br>
+b. Brian: It's a great way to gain experience and help the community.<br>
+c. Susan: That sounds interesting. What kind of work do they do?<br>
+d. Brian: Mostly teaching kids and organizing weekend activities.<br>
+e. Brian: Are you going to join the volunteering project this summer?</p>
+<h3>Question 37.</h3>
+<p>a.	Since you helped me before, I want to help you with your challenge.<br>
+b.	Although the path was hard, I kept walking until I reached the top.<br>
+c.	While big problems feel scary, we can solve them when we try each day.<br>
+d.	When I climbed the small mountain, I felt very happy because I did it!<br>
+e.	If you try again tomorrow, you will feel better than today.<br>
+Your friend,<br>
+John</p>
+<h3>Question 38.</h3>
+<p>a. Sarah: Hi, Ben! It's been ages since we last caught up. You look great!<br>
+b. Sarah: Yes, I have! I started running every morning and switched to a healthier diet.<br>
+c. Ben: Hi, Sarah! Thank you. You're looking fantastic, too. Have you been working out?</p>
+<h3>Question 39.</h3>
+<p>a. For example, behaviors that are acceptable in one culture, such as direct eye contact, may be considered impolite in another.<br>
+b. At first, people may feel excited about exploring a new culture, but this initial enthusiasm often fades as they begin to notice differences in language, customs, and social norms.<br>
+c. Culture shock, which occurs when individuals struggle to adapt to a foreign culture, is a common experience for travelers and expatriates.<br>
+d. This period of adjustment can be challenging, but it ultimately helps individuals develop a deeper understanding of and respect for cultural diversity.<br>
+e. Such differences can lead to feelings of frustration, confusion, or even isolation for newcomers.</p>
+<h3>Question 40.</h3>
+<p>a. In addition, adhering to a balanced diet rich in nutrients and engaging in regular physical activity have been proven to significantly enhance one's overall well-being and resilience.<br>
+b. As a result, maintaining an optimistic outlook, even during challenging circumstances, is considered essential to living a happier and more fulfilling life.<br>
+c. Recent scientific studies have consistently indicated that optimism not only improves mental health but can also positively impact physical health outcomes.<br>
+d. For example, individuals who demonstrate optimism are often observed to recover faster from illnesses and injuries compared to their more pessimistic counterparts.<br>
+e. In summary, integrating optimism with healthy lifestyle practices, including proper nutrition and consistent exercise routines, can greatly improve both mental and physical health.</p>
+
+</div>
+
+
+
+<!-- QUESTION -->
+<div class="question-box">
+<h3 id="questionTitle"></h3>
+<div id="options"></div>
+</div>
+
+</div>
+
+<script>
+const questions = [
+
+/* 1–5 */
+{title:"Question 1", options:[
+"A. that got her investigative reporting best known",
+"B. best known for her investigative reporting",
+"C. having been known best for her investigative reporting",
+"D. of whom investigative reporting was known best"
+], answer:1},
+
+{title:"Question 2", options:[
+"A. Her first article, in which she claimed that not every woman was required to marry",
+"B. It is her first article that said being married was unnecessary for all woman",
+"C. In her first article, she argued that not all women needed to get married",
+"D. That marriage was not necessary for every women was stated in her first article"
+], answer:2},
+
+{title:"Question 3", options:[
+"A. newspapers refused to employ a woman so Nellie was turned down for jobs",
+"B. Nellie was rejected from jobs because newspapers wouldn't hire a woman",
+"C. female employees weren't accepted, therefore Nellie couldn't get jobs",
+"D. job opportunities were denied for Nellie as newspapers didn't want to hire women"
+], answer:1},
+
+{title:"Question 4", options:[
+"A. with an initial rejection from her newspaper",
+"B. was rejected by her newspaper at first",
+"C. initially rejected by her newspaper",
+"D. first rejected her an agreement from her newspaper"
+], answer:1},
+
+{title:"Question 5", options:[
+"A. Her life has inspired dozens of movies, TV series, and books",
+"B. Such was her life that has inspired dozens of movies, TV series, and books",
+"C. Based on her life, dozens of movies, TV series, and books got an inspiration",
+"D. After her death, dozens of movies, TV series, and books have been inspired"
+], answer:0},
+
+/* 6–11 */
+{title:"Question 6", options:["A. recyclability","B. recycle","C. recycled","D. recyclable"], answer:3},
+{title:"Question 7", options:["A. fashion sustainable industry","B. sustainable fashion industry","C. industry fashion sustainable","D. sustainable industry fashion"], answer:1},
+{title:"Question 8", options:["A. which","B. where","C. what","D. who"], answer:0},
+{title:"Question 9", options:["A. out","B. with","C. to","D. at"], answer:2},
+{title:"Question 10", options:["A. keep","B. make","C. talk","D. say"], answer:0},
+{title:"Question 11", options:["A. creating","B. create","C. to create","D. to creating"], answer:2},
+
+/* 12–19 */
+{title:"Question 12", options:[
+"A. Environmental influences during childhood",
+"B. Religious teachings",
+"C. Limited exposure to other cultures",
+"D. Media representation of certain groups"
+], answer:1},
+
+{title:"Question 13", options:["A. unplanned","B. deliberate","C. unintentional","D. automatic"], answer:1},
+{title:"Question 14", options:["A. communities","B. managers","C. workplaces","D. candidates"], answer:1},
+{title:"Question 15", options:["A. inconsistent","B. unnecessary","C. unsuccessful","D. insufficient"], answer:0},
+
+{title:"Question 16", options:[
+"A. Overcoming bias in society leads to harmonious relationships between communities",
+"B. Reducing cultural bias provides advantages that exceed improved social cohesion alone",
+"C. Social harmony is the primary outcome when cultural bias is gradually eliminated",
+"D. Cultural differences create tensions that must be resolved to achieve social progress"
+], answer:1},
+
+{title:"Question 17", options:[
+"A. Homogeneous teams typically demonstrate superior problem-solving capabilities",
+"B. Virtual reality technology has minimal impact on reducing cultural stereotypes",
+"C. Children acquire cultural prejudices primarily from their surrounding environment",
+"D. Most organizations have successfully eliminated bias through diversity training"
+], answer:2},
+
+{title:"Question 18", options:["A. Paragraph 3","B. Paragraph 1","C. Paragraph 4","D. Paragraph 2"], answer:3},
+{title:"Question 19", options:["A. Paragraph 4","B. Paragraph 3","C. Paragraph 2","D. Paragraph 1"], answer:0},
+
+/* 20–29 */
+{title:"Question 20", options:["A. [III]","B. [IV]","C. [I]","D. [II]"], answer:1},
+
+{title:"Question 21", options:[
+"A. They are beneficial to biodiversity.",
+"B. They help prevent unsustainable land use.",
+"C. They are grown on plantations for a long time.",
+"D. They can help slow down urbanisation."
+], answer:3},
+
+{title:"Question 22", options:[
+"A. Although artificial trees can be reused, they produce much higher carbon emissions during manufacturing and transport.",
+"B. Not until artificial trees are reused many times do their production and transport reduce overall carbon emissions.",
+"C. No matter how reusable artificial trees may be, their production and transport rarely result in significant carbon emissions.",
+"D. It is their ability to be reused that makes artificial trees less harmful despite emissions from production and transport."
+], answer:0},
+
+{title:"Question 23", options:[
+"A. Real trees decay naturally...",
+"B. Real trees release carbon, but landfill creates worse methane, calling for composting as the most sustainable alternative.",
+"C. Pot-grown trees and rented ones are widely used...",
+"D. Real trees release carbon when decaying, but landfill causes worse methane, which highlights the role of sustainable options."
+], answer:3},
+
+{title:"Question 24", options:["A. natural","B. powerful","C. typical","D. widespread"], answer:1},
+{title:"Question 25", options:["A. anaerobic conditions","B. tree rentals and pot-grown trees","C. real trees","D. sustainable options"], answer:2},
+{title:"Question 26", options:["A. appreciated","B. forgotten","C. dominant","D. deep-rooted"], answer:1},
+
+{title:"Question 27", options:[
+"A. Real Christmas trees pose a greater environmental threat if they are disposed of in landfills.",
+"B. Most companies are sluggish in providing sustainable alternatives to fake Christmas trees.",
+"C. Buying locally grown Christmas trees is the most sustainable way to enjoy the holiday.",
+"D. The carbon footprint of real Christmas trees is comparable to that of artificial ones."
+], answer:0},
+
+{title:"Question 28", options:[
+"A. Real Christmas trees are considered more environmentally friendly than artificial ones.",
+"B. Reusing real Christmas trees for energy and habitat restoration should be prioritised.",
+"C. Managing Christmas trees can serve as a small but meaningful step towards sustainability.",
+"D. Turning Christmas into an eco-friendlier holiday depends mostly on Christmas trees."
+], answer:2},
+
+{title:"Question 29", options:[
+"A. Christmas tree sustainability compares...",
+"B. Choosing between real and artificial Christmas trees is complex...",
+"C. The environmental impact of Christmas trees involves comparing...",
+"D. Beyond real or artificial, Christmas tree sustainability requires understanding..."
+], answer:3},
+
+/* 30–35 */
+{title:"Question 30", options:["A. Therefore","B. But","C. Nevertheless","D. Consequently"], answer:3},
+{title:"Question 31", options:["A. purchase","B. devour","C. ingest","D. consume"], answer:0},
+{title:"Question 32", options:["A. a","B. the","C. an","D. no article"], answer:1},
+{title:"Question 33", options:["A. Refill","B. Reuse","C. Recycle","D. Reduce"], answer:2},
+{title:"Question 34", options:["A. devices","B. machines","C. appliances","D. equipment"], answer:2},
+{title:"Question 35", options:["A. cut down on","B. run out of","C. face up to","D. put up with"], answer:0},
+
+/* 36–40 */
+{title:"Question 36", options:["A. c - e - d - b – a","B. e - b - a - d – c","C. d - b - a - e – c","D. e - a - b - c – d"], answer:3},
+{title:"Question 37", options:["A. b-a-d-e-c","B. e-a-c-b-d","C. d-b-e-a-c","D. a-d-e-b-c"], answer:1},
+{title:"Question 38", options:["A. c-b-a","B. a-c-b","C. c-a-b","D. b-c-a"], answer:2},
+{title:"Question 39", options:["A. c-b-e-a-d","B. c-a-e-b-d","C. c-e-a-b-d","D. c-b-a-e-d"], answer:0},
+{title:"Question 40", options:["A. c-d-a-b-e","B. b-c-a-d-e","C. c-d-b-a-e","D. d-c-b-a-e"], answer:0}
+
+];
+let current = 0;
+let selected = {};
+
+function renderList(){
+  let list = document.getElementById("questionList");
+  list.innerHTML = "";
+  questions.forEach((q,i)=>{
+    let b = document.createElement("button");
+    b.innerText = i+1;
+    b.onclick = ()=>loadQ(i);
+    if(i===current) b.classList.add("active");
+    list.appendChild(b);
+  });
+}
+
+function loadQ(i){
+  current = i;
+  renderList();
+
+  let q = questions[i];
+  document.getElementById("questionTitle").innerText = q.title;
+
+  let opt = document.getElementById("options");
+  opt.innerHTML = "";
+
+  q.options.forEach((o,idx)=>{
+    let d = document.createElement("div");
+    d.className = "option";
+    d.innerText = o;
+
+    if(selected[i] === idx) d.classList.add("selected");
+
+    d.onclick = ()=>{
+      selected[i] = idx;
+      loadQ(i);
+    };
+
+    opt.appendChild(d);
+  });
+}
+
+function submitQuiz(){
+  let s = 0;
+  questions.forEach((q,i)=>{
+    if(selected[i] === q.answer) s++;
+  });
+  alert("Bạn đúng " + s + "/" + questions.length + " câu");
+}
+
+renderList();
+loadQ(0);
+</script>
+
+
+
+</body>
+</html>
